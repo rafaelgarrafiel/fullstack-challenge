@@ -51,6 +51,7 @@ class PedidoResource(Resource):
                 "error": "Pedido não encontrado"
             }
         result = pedido.get_pedido()
+        # print(result)
         return pedido_schema.dump(result)
         
 

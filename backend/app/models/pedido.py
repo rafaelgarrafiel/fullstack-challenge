@@ -105,7 +105,8 @@ class Pedido():
         return registros
     
     def get_pedido(self):
-        registros = Pedidos.query.filter(
+        valores = []
+        lista = Pedidos.query.filter(
             Pedidos.ativo == True,
             Pedidos.id == self.get_id()
             ).outerjoin(Clientes,
@@ -118,5 +119,6 @@ class Pedido():
                     Pedidos.status_pedido,
                     Clientes.primeiro_nome.label('cliente')
                     )
-
-        return registros
+        for und in lista:
+            valores.append(dict((col, getattr(und, col)) for col in und.keys()))
+        return valores[0]
