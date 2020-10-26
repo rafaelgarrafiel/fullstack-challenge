@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+    backend:
+        container_name: challenge_backend
+        build:
+            context: './backend/'
+        ports:
+            - 5000:5000
+        volumes:
+            - ./backend/app:/src/app
+    frontend:
+        container_name: challenge_frontend
+        build:
+            context: './frontend/'
+        ports:
+            - 3000:3000
+        volumes:
+            - ./frontend/app:/usr/app
