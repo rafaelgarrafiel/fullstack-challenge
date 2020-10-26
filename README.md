@@ -45,4 +45,4 @@ docker exec challenge_backend flask populate-db
 
 O acesso ao frontend estará disponível em [`http://localhost:3000`](http://localhost:3000).
 
-A api do backend estará disponível em [`http://localhost:8000`](http://localhost:8000).
+A api do backend estará disponível em [`http://localhost:8000`](http://localhost:5000).
