@@ -15,6 +15,7 @@ EXTENSIONS = [
     "app.plugins.cli:init_app",
     "app.plugins.toolbar:init_app",
     "app.plugins.validation:init_app",
+    "app.plugins.cors:init_app",
 ]
 
 [development]
@@ -38,6 +39,7 @@ EXTENSIONS = [
     "app.plugins.cli:init_app",
     "app.plugins.toolbar:init_app",
     "app.plugins.validation:init_app",
+    "app.plugins.cors:init_app",
     "app.api.routes:init_app",
 ]
 

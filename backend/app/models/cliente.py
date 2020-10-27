@@ -32,6 +32,10 @@ class Cliente():
     def set_email(self, email):
         self.__email = email
     
+    def get_cliente_json(self):
+        cliente = Clientes.query.filter(Clientes.id==self.get_id()).filter(Clientes.ativo == True).first()
+        return cliente_schema.dump(cliente)
+    
     def save(self):
         
         try:
